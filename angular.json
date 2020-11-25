@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Keels"
+    }
+  },
+  "defaultProject": "Keels",
+  "cli": {
+    "analytics": "f632ad1b-6637-4288-8867-c8945ff6bbb4"
+  }
 }
