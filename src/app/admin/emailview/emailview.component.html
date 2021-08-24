@@ -1,0 +1,20 @@
+<div class="row">
+    <div *ngFor="let Messages of model" >
+        <h2 mat-dialog-title>{{Messages.topic}}</h2>
+        <mat-dialog-content class="mat-typography">
+          <h3 mat-dialog-title>Date: {{Messages.date}}</h3>
+          <h3 mat-dialog-title>Admin: {{Messages.admin}}</h3>
+          <mat-card class="crd">
+             <mat-card-content>
+            <p>
+           {{Messages.msg}}
+           </p>    
+              </mat-card-content>
+          </mat-card>
+          <br>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+          <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+        </mat-dialog-actions>
+    </div>
+</div>

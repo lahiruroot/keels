@@ -1,0 +1,30 @@
+
+
+ <!-- <h2 mat-dialog-title>Farmers Location Tracker</h2> -->
+ <div class='container'>
+  <div class="row">
+    <div class="col-sm">
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <div *ngFor="let user of model">
+          <agm-marker [latitude]="user.lat" [longitude]="user.lng">
+            <agm-info-window>
+              <dl>
+                <div class="tt">
+                <dt><img class="tt" src="https://aeroinhaler.com/wp-content/uploads/2017/08/Store-Icon.png"></dt>
+                </div>
+                <dt><mat-label>User Id</mat-label></dt>
+                <dd><strong>{{user.id}}</strong></dd>
+                <dt><mat-label>Seller Name</mat-label></dt>
+                <dd><strong>{{user.firstName}} {{user.lastName}}</strong></dd>
+                <dt><mat-label>Address</mat-label></dt>
+                <dd><strong>{{user.address}}</strong></dd>
+                <dt><mat-label>Home town</mat-label></dt>
+                <dd><strong>{{user.hometown}}</strong></dd>
+              </dl>
+            </agm-info-window>
+          </agm-marker>
+        </div>
+      </agm-map>
+    </div>
+  </div>
+ </div>

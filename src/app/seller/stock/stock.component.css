@@ -1,0 +1,21 @@
+.stock-card{
+
+    background-color: rgb(13, 169, 241);
+    
+}
+
+.order-card{
+
+    background-color: rgb(241, 13, 184);
+}
+
+.income-card{
+
+    background-color: rgb(188, 13, 241);
+}
+
+/* .mat-card-title{
+
+    color: rgb(255, 255, 255);
+    font-style: initial;
+} */

@@ -1,0 +1,58 @@
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-card>
+            <mat-card-title>
+                <mat-label>
+                    <h2>
+                      Notifications 
+                    </h2>
+                </mat-label>
+            </mat-card-title>
+        </mat-card>
+    </div>
+</div>
+<br>
+<div class="container">
+  <div class="col-sm">
+    <mat-card [formGroup]="messageform">
+      <table class="example-full-width" cellspacing="0"><tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <mat-label>Admin</mat-label>
+            <input matInput disabled Value ="Keels Pvt.ltd" formControlName="admin">
+            </mat-form-field>
+          </td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Enter Topic</mat-label>
+            <input matInput formControlName="topic">
+          </mat-form-field></td></tr>
+      </table>
+     <table class="example-full-width" cellspacing="0"><tr>
+     <td>
+       <div class="dtp">
+          <input class="form-control" type="date" placeholder="Set registration date" value="" id="example-date-input" formControlName="date">
+        </div>
+     </td>
+     </tr>
+     </table>
+     <br>
+    <table class="example-full-width" cellspacing="0"><tr>
+    <td>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter Message....</mat-label>
+        <textarea matInput placeholder="Hello" formControlName="msg">
+        </textarea>
+      </mat-form-field>
+    </td>
+    </tr>
+    </table>
+    <br>
+    <div class="btn">
+      <button mat-raised-button color="primary" (click)='message()'>Send Message</button>
+    </div>
+    </mat-card>
+    <br>
+  </div>
+</div>

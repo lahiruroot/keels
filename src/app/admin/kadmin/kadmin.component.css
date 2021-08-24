@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 300px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png');
+    background-size: cover;
+  }
+
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }

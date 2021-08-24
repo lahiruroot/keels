@@ -1,0 +1,43 @@
+<br>
+  <div class='container'>
+    <div class="row row-cols-1 row-cols-md-3">
+        <div *ngFor="let product of model" >
+            <div class="col mb-4">
+                <div class="card">
+                  <img src="{{product.prod.img}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <div class="container">
+                      <div class="row no-gutters">
+                        <div class="col-12 col-sm-6 col-md-8">
+                          <mat-label><h1 class="card-title">{{product.prod.catagory}}</h1></mat-label>
+                        </div>
+                        <div class="col-6 col-md-4">
+                       <mat-label><h2 class="card-title">{{product.prod.quntity}}</h2></mat-label>
+                        </div>
+                      </div>
+                      <div class="row no-gutters">
+                      <div class="col-12 col-md-8">
+                       <mat-label><h2 class="card-title">{{product.prod.price}}</h2></mat-label>
+                      </div>
+                      </div>
+                      <div class="row no-gutters">
+                      <div class="col-12 col-sm-6 col-md-8">
+                       <mat-label><h3 class="card-title">Add By: {{product.prod.nic}}</h3></mat-label> 
+                       </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="col-1"><button (click)="conform(product.docId,product.prod.uid,'reject',product.prod.catagory)" mat-raised-button color="warn">Reject</button> </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="col"><button (click)="conform(product.docId,product.prod.uid,'confirm',product.prod.catagory)" mat-raised-button color="primary">Confirm</button> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+
+

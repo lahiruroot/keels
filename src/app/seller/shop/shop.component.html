@@ -1,0 +1,84 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+          <mat-card-title>
+              <mat-label>
+                  <h2>
+                    Add Your Products.
+                  </h2>
+              </mat-label>
+          </mat-card-title>
+  </div>
+</div>
+<br>
+<mat-card>
+  <mat-card-content>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+
+          <mat-card [formGroup]="shop">
+            <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Add a products</mat-label>
+                <input matInput disabled value="Import Details">
+              </mat-form-field>
+
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Your National Id</mat-label>
+                      <input matInput placeholder="uid" formControlName="nic" required>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Item Name</mat-label>
+                      <input matInput formControlName="catagory" placeholder="What are you selling ?"required>
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </table>
+
+
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Quntity</mat-label>
+                      <input matInput formControlName="quntity" placeholder="Kg"required>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Price Information</mat-label>
+                      <input matInput formControlName="price" placeholder="Rs:"required>
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <table>
+                <tr>
+                  <td>Add Images </td>
+                  <td><input type="file" (change)="uploadFile($event)"></td>
+                </tr>
+              </table>
+              <br>
+              <div>
+                <mat-progress-bar style="height: 10px;" mode="determinate" value="{{ uploadPercent | async }}">
+                </mat-progress-bar>
+              </div>
+            </div>
+            <br>
+            <div class=b>
+              <button mat-raised-button (click)="addProduct()" color="primary">Add Your Products</button>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

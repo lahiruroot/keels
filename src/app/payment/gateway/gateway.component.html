@@ -1,0 +1,148 @@
+<header class="page-footer font-small unique-color-dark">
+  <div style="background-color: #17aaff;">
+    <div class="container">
+      <div class="row py-4 d-flex align-items-center">
+        </div>
+      </div>
+    </div>
+</header>
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+       <mat-card>
+         <mat-card-header>
+           <mat-card-title style="color:rgb(79, 212, 45);">
+             Payments
+           </mat-card-title>
+         </mat-card-header>
+            <mat-card [formGroup]="paymentForm">
+              <mat-card-content>
+                <div>
+                <div class="row">
+                  <div class="col-sm">
+                      <mat-form-field class="example-full-width">
+                        <mat-label class="fa fa-cc-amex" style="font-size:16px" > Name on Card</mat-label>
+                        <input matInput placeholder="Ex Michel" value="" formControlName="crdname">
+                      </mat-form-field>
+                  </div>
+                  <div class="col-sm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Card Number</mat-label>
+                      <input matInput placeholder="" value="" formControlName="crdnum">
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-sm">
+                      <mat-form-field class="example-full-width">
+                        <mat-label>Exp Month</mat-label>
+                        <input matInput placeholder="" value="" formControlName="expmonth">
+                      </mat-form-field>
+                  </div>
+                  <div class="col-sm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label class="fa fa-credit-card-alt"> CVV Number</mat-label>
+                      <input matInput placeholder="" value="" formControlName="cvvnum">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                      <mat-form-field class="example-full-width">
+                        <mat-label>Exp Year</mat-label>
+                        <input matInput placeholder="" value="" formControlName="expyear">
+                      </mat-form-field>
+                  </div>
+                  <div class="col-sm">
+                    <div class="icon-container-row">
+                      <div class="row">
+                        <div class="icnamr">
+                          <mat-label></mat-label>
+                        </div>
+                        <div class="col-md-2"> <mat-icon class="fa fa-cc-visa" style="color:navy;"></mat-icon> </div>
+                        <div class="col-md-2"> <mat-icon class="fa fa-cc-amex" style="color:blue;"></mat-icon> </div>
+                        <div class="col-md-2"> <mat-icon class="fa fa-cc-mastercard" style="color:rgb(16, 16, 17);"></mat-icon> </div>
+                        <div class="col-md-2"> <mat-icon class="fa fa-cc-discover" style="color:rgb(48, 150, 22);"></mat-icon> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                        <mat-label>
+                          <h1>Billing Details</h1>
+                        </mat-label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                      <mat-form-field class="example-full-width">
+                        <mat-label>
+                        <label for="fname" class="fa fa-user" style="font-size:16px"> Full Name</label>
+                      </mat-label>
+                        <input matInput placeholder="" value="" formControlName="fname">
+                      </mat-form-field>
+                  </div>
+                  <div class="col-sm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>
+                        <label for="email" class="fa fa-envelope" style="font-size:16px" > Email</label>
+                      </mat-label>
+                      <input matInput placeholder="" value="" formControlName="email">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm">
+                      <mat-form-field class="example-full-width">
+                        <mat-label>
+                          <label for="city" class="fa fa-institution" style="font-size:16px" > City</label>
+                      </mat-label>
+                        <input matInput placeholder="" value="" formControlName="city">
+                      </mat-form-field>
+                  </div>
+                  <div class="col-sm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>
+                        <label for="adr"  class="fa fa-truck" style="font-size:16px"> Shipping Address</label>
+                      </mat-label>
+                      <input matInput placeholder="" value="" formControlName="adress">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm">
+                      <mat-form-field class="example-full-width">
+                        <mat-label  style="font-size:16px">
+                          <label for="city" class="fa fa-map-marker" style="font-size:16px" > State</label>
+                      </mat-label>
+                        <input matInput placeholder="" value="" formControlName="stat">
+                      </mat-form-field>
+                  </div>
+                  <div class="col-sm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label  style="font-size:16px" >
+                        <label for="city" class="fa fa-cc" style="font-size:16px" >  Postal Code</label>
+                      </mat-label>
+                      <input matInput placeholder="" value="" formControlName="pstcode">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm">
+                    <button (click)="cart()" (click)="pay()" mat-raised-button color="primary">Confirm</button>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+       </mat-card>
+       {{paymentForm.value | json}}
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,24 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+.mat-raised-button {
+    left: 65%;
+    width: 20%;
+}
+
+.icon-container-row {
+    margin-bottom: 10px;
+    padding: 7px 0;
+    font-size: 30px;
+  }
+.icnamr{
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 7px 0;
+}
