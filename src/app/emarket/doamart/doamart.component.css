@@ -1,0 +1,23 @@
+
+.example-card{
+    height: 250px;
+    width: 50%;
+}
+.btn {
+    padding-left: 65%;
+    padding-top: 10;
+    /* padding-top: 60%; */
+ }
+ .card-lable{
+     color: rgb(100, 5, 224);
+ }
+ .product-title{
+     color: rgb(2, 120, 255);
+ }
+ .card-img-top{
+     height: 260px;
+     width: 100%;
+ }
+ .card-body{
+     height: 50%;
+ }

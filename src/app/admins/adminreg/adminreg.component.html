@@ -1,0 +1,62 @@
+<header class="page-footer font-small unique-color-dark">
+    <div style="background-color: #088bdd;">
+      <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+          </div>
+        </div>
+      </div>
+  </header>
+  <br>
+  <div class="container">
+    <div class="col-sm">
+      <mat-card [formGroup]="adminform">
+          <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Add a products(disabled)</mat-label>
+                <input matInput disabled value="Import Details">
+              </mat-form-field>
+            
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="adminFame">
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="adminLname">
+                </mat-form-field></td>
+              </tr></table>
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="adminEmail">
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Phone number</mat-label>
+                  <input matInput placeholder="+94" formControlName="pNmuber">
+                </mat-form-field></td>
+              </tr></table>
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Enter your password</mat-label>
+                  <input formControlName="adminPass" matInput [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Conferm your password</mat-label>
+                  <input formControlName="adminConpass" matInput [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field></td>
+              </tr></table>
+          </div>
+          <br>
+          <button mat-raised-button (click)="singUp()" color="primary">Submit details</button>
+      </mat-card>
+      {{adminform.value | json}}
+  </div>
+
+  </div>

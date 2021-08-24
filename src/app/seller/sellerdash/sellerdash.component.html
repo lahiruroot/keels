@@ -1,0 +1,30 @@
+
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-success p-4">
+      <h1 class="text-white">{{fullName}}</h1>
+      <mat-card-subtitle>
+        <h2 class="text-white">
+         {{id}}
+        </h2>
+      </mat-card-subtitle>
+      <div class="col align-self-start">
+      <button mat-raised-button color="basic" style="cursor:pointer"(click)="singOut()">Logout</button>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+<!-- Navbar -->
+<mat-tab-group>
+<mat-tab label="My Profile"><app-pdata></app-pdata></mat-tab>
+<mat-tab label="Oder Requests"><app-prcview></app-prcview></mat-tab>
+<mat-tab label="Add Your Products"><app-shop></app-shop></mat-tab>
+<mat-tab label="Statements"><app-stock></app-stock></mat-tab>
+<mat-tab label="DOA Store"><app-doamart></app-doamart></mat-tab>
+<mat-tab label="Mails"><app-viewmgs></app-viewmgs></mat-tab>
+</mat-tab-group> 

@@ -1,0 +1,35 @@
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col">
+            <mat-card-title>
+                <mat-label>
+                    <h2>
+                      Department Of Agriculture Online Store. 
+                    </h2>
+                </mat-label>
+            </mat-card-title>
+    </div>
+</div>
+<br>
+<div class="container">
+    <br>
+    <div class="row row-cols-1 row-cols-md-3">
+    <div *ngFor="let product of model" >
+        <div class="col mb-4">
+            <div class="card">
+              <img src="{{product.img}}" class="card-img-top" alt="...">
+              <div class="card-body">
+               <mat-label> <h1 class="product-title">{{product.prodName}}</h1></mat-label>
+               <mat-label> <h3 class="card-text">{{product.mainDis}}</h3> </mat-label> 
+               <div class="tag">
+                <p class="card-lable">{{product.price}}.00</p>
+               </div>
+                <div class="btn">
+                <button (click)="gateway()" mat-raised-button color="primary">Add to cart</button> 
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

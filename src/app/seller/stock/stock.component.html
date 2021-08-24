@@ -1,0 +1,36 @@
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+     <mat-card-title>
+        <mat-label>
+          <h2>
+        Statements of Products
+          </h2>
+        </mat-label>
+    </mat-card-title>
+  </div>
+</div>
+<br>
+  <div class="container">
+    <mat-card>
+      <mat-card-content>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">product</th>
+              <th scope="col">status</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr  *ngFor="let result of model">
+                <td>{{result.name}}</td>
+                <td>{{result.confirm}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+<br>

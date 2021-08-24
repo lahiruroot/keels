@@ -1,0 +1,69 @@
+<mat-card>
+  <mat-card-content>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+
+          <mat-card [formGroup]="form">
+            <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Add a products(disabled)</mat-label>
+                <input matInput disabled value="Import Details">
+              </mat-form-field>
+
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Product Name</mat-label>
+                      <input matInput formControlName="prodName">
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Short Discription</mat-label>
+                      <input matInput formControlName="subDis">
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </table>
+
+              <p>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Discription</mat-label>
+                  <textarea matInput placeholder="Ex. 100 Main St" formControlName="mainDis"></textarea>
+                </mat-form-field>
+              </p>
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field style="width: 50%;">
+                      <mat-label>Price Information</mat-label>
+                      <input matInput placeholder="$0.00" formControlName="price">
+                    </mat-form-field>
+                  </td>
+
+                </tr>
+              </table>
+              <br>
+              <table>
+                <tr>
+                  <td>Add Images </td>
+                  <td><input type="file" (change)="uploadFile($event)"></td>
+                </tr>
+              </table>
+              <br>
+              <div>
+                <mat-progress-bar style="height: 10px;" mode="determinate" value="{{ uploadPercent | async }}">
+                </mat-progress-bar>
+              </div>
+
+            </div>
+            <br>
+            <button (click)="addProduct()" mat-raised-button color="primary">Submit details</button>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
